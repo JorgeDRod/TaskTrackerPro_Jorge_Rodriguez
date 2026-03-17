@@ -1,0 +1,63 @@
+:root {
+    --LIGHT_COLOR: #00a6fb;
+    --MEDIUM_LIGHT_COLOR: #0582ca;
+    --MEDIUM_COLOR: #006494;
+    --MEDIUM_DARK_COLOR: #003554;
+    --DARK_COLOR: #051923;
+}
+
+body {
+    font-family: monospace, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--MEDIUM_COLOR);
+    padding-bottom: 4rem;
+}
+
+header {
+    background-color: var(--DARK_COLOR);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+p {
+    color: #fff;
+    max-width: 600px;
+    margin: 0.5rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+button {
+    margin: 20px 0;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: var(--LIGHT_COLOR);
+    color: #fff;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: var(--MEDIUM_LIGHT_COLOR);
+}
+
+div.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 80vh;
+    align-items: center;
+}
+
+footer {
+    background-color: var(--DARK_COLOR);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
