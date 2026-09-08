@@ -1,29 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Tracker Pro by Jorge Rodriguez</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Task Tracker Pro - Android task and project cost management application developed as a Software Engineering capstone project."
+  >
+  <title>Task Tracker Pro | Jorge Daniel Rodriguez-Bravo</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-        <h1>Task Tracker Pro</h1>
-    </header>
-    <div class="info">
-        <p>Welcome to Task Tracker Pro, your ultimate solution for managing tasks efficiently. Developed by Jorge Rodriguez, this application is designed to help you stay organized and productive.</p>
-        <p>With Task Tracker Pro, you can easily create, track, and manage your tasks in one convenient place. Task Tracker Pro has got you covered.</p>
-        <p>Download the app now and take control of your tasks like never before!</p>
-        <p>Click the button below to download Task Tracker Pro and start managing your tasks effectively:</p>
-        
-        <a href="https://raw.githubusercontent.com/JorgeDRod/TaskTrackerPro_Jorge_Rodriguez/main/app-release.apk" class="download-button" download>
-            Download Task Tracker Pro
-        </a>
 
-        <p>Please support the development of Task Tracker Pro by using the app and providing feedback.</p>
+<body>
+  <header class="hero">
+    <div class="container hero-content">
+      <p class="eyebrow">Software Engineering Capstone</p>
+
+      <h1>Task Tracker Pro</h1>
+
+      <p class="hero-subtitle">
+        Native Android task and project cost management application
+      </p>
+
+      <div class="tech-list">
+        <span>Java</span>
+        <span>Android</span>
+        <span>Room</span>
+        <span>ViewModel</span>
+        <span>LiveData</span>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#preview" class="button primary">View Application</a>
+        <a href="app-release.apk" class="button secondary">Download APK</a>
+      </div>
+
+      <div class="hero-image">
+        <img
+          src="images/task-list.png"
+          alt="Task Tracker Pro task list showing hourly and fixed-price tasks"
+        >
+      </div>
     </div>
-    <footer>
-        <p>&copy; 2026 Task Tracker Pro. All rights reserved for Jorge Rodriguez.</p>
-    </footer>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <p class="section-label">About</p>
+        <h2>About the Project</h2>
+
+        <p class="section-intro">
+          Task Tracker Pro is a native Android application developed as my
+          Software Engineering capstone at Western Governors University.
+          The application helps users create and manage hourly and fixed-price
+          tasks, calculate project costs, persist task data locally, and generate
+          task summary reports.
+        </p>
+      </div>
+    </section>
+
+    <section class="section alternate">
+      <div class="container">
+        <p class="section-label">Capabilities</p>
+        <h2>Key Features</h2>
+
+        <div class="feature-grid">
+          <article class="card">
+            <h3>Task Management</h3>
+            <p>
+              Create, view, search, update, and delete tasks through a native
+              Android interface.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Flexible Billing Models</h3>
+            <p>
+              Supports both hourly tasks and fixed-price tasks with separate
+              calculation behavior.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Automatic Cost Calculation</h3>
+            <p>
+              Calculates hourly totals from rate and hours worked while
+              preserving fixed-price totals for contract-based tasks.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Local Data Persistence</h3>
+            <p>
+              Uses Android Room to store application data locally between
+              sessions.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Search and Editing</h3>
+            <p>
+              Users can locate existing tasks and modify task details as work
+              requirements change.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Summary Reporting</h3>
+            <p>
+              Generates task reports containing task type, cost information,
+              and a report-generation timestamp.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="preview" class="section">
+      <div class="container">
+        <p class="section-label">Application</p>
+        <h2>Application Preview</h2>
+
+        <div class="screenshot-grid">
+          <figure>
+            <img src="images/login.png" alt="Task Tracker Pro login screen">
+            <figcaption>User login</figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="images/task-list.png"
+              alt="Task Tracker Pro task list with hourly and fixed-price tasks"
+            >
+            <figcaption>Task overview and calculated totals</figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="images/add-task.png"
+              alt="Task Tracker Pro new hourly task form"
+            >
+            <figcaption>Create an hourly or fixed-price task</figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="images/edit-task.png"
+              alt="Task Tracker Pro edit task screen"
+            >
+            <figcaption>Edit existing task information</figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="images/report.png"
+              alt="Task Tracker Pro task summary report"
+            >
+            <figcaption>Generated task summary report</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alternate">
+      <div class="container">
+        <p class="section-label">Design</p>
+        <h2>Software Design</h2>
+
+        <div class="design-grid">
+          <article class="card">
+            <h3>Application Architecture</h3>
+
+            <div class="architecture">
+              <span>Android UI</span>
+              <span class="arrow">↓</span>
+              <span>ViewModel</span>
+              <span class="arrow">↓</span>
+              <span>Repository</span>
+              <span class="arrow">↓</span>
+              <span>DAO</span>
+              <span class="arrow">↓</span>
+              <span>Room Database</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Task Model</h3>
+
+            <div class="task-model">
+              <div class="parent-node">Task</div>
+
+              <div class="branch">
+                <div>
+                  <strong>HourlyTask</strong>
+                  <p>hourly rate × hours</p>
+                </div>
+
+                <div>
+                  <strong>FixedPriceTask</strong>
+                  <p>fixed project price</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="section-label">Engineering</p>
+        <h2>Technical Concepts Demonstrated</h2>
+
+        <div class="concept-list">
+          <span>Object-Oriented Programming</span>
+          <span>Inheritance</span>
+          <span>Polymorphism</span>
+          <span>Factory Pattern</span>
+          <span>Repository Pattern</span>
+          <span>CRUD Operations</span>
+          <span>Local Persistence</span>
+          <span>Input Validation</span>
+          <span>Android Architecture Components</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alternate">
+      <div class="container">
+        <p class="section-label">Technology</p>
+        <h2>Technology Stack</h2>
+
+        <div class="stack-grid">
+          <span>Java</span>
+          <span>Android SDK</span>
+          <span>Room</span>
+          <span>ViewModel</span>
+          <span>LiveData</span>
+          <span>RecyclerView</span>
+          <span>Gradle</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section project-context">
+      <div class="container">
+        <p class="section-label">Context</p>
+        <h2>Project Context</h2>
+
+        <p>
+          Task Tracker Pro was developed as the capstone project for my
+          Bachelor of Science in Software Engineering at Western Governors
+          University.
+        </p>
+
+        <p>
+          The source code remains private in accordance with academic and
+          course repository requirements. This page documents the application,
+          architecture, and software engineering concepts demonstrated by the
+          project.
+        </p>
+
+        <a href="app-release.apk" class="button primary">Download APK</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>Built by Jorge Daniel Rodriguez-Bravo</p>
+
+      <div>
+        <a href="https://github.com/JorgeDRod">GitHub</a>
+        <a href="https://www.linkedin.com/in/jorge-daniel-rodriguez-bravo-8ab91a1b7/">
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
